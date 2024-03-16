@@ -79,29 +79,32 @@ import ProjectsCard from './ProjectsCard.vue';
     max-width: 548px;
     width: 100%;
   }
-  &__card-description {
+}
+.card {
+  &__description {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
   }
-  &__card-name {
+  &__name {
     font-family: "DM Serif Display", sans-serif;
     font-weight: 400;
     font-size: 25px;
     line-height: 125%;
     letter-spacing: 0.02em;
     color: $text-color2;
+    text-transform: capitalize;
   }
-  &__card-info {
+  &__info {
     font-family: "Jost", sans-serif;
     font-weight: 400;
     font-size: 22px;
     line-height: 150%;
     letter-spacing: 0.01em;
+    text-transform: capitalize;
   }
-
   &__icon-arrow {
     width: 70px;
     height: 70px;
@@ -112,5 +115,10 @@ import ProjectsCard from './ProjectsCard.vue';
     height: 20px;
   }
 }
+
+
+
+
+
 
 </style>

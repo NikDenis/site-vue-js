@@ -4,13 +4,13 @@
       <div class="projects__image-wrapper">
         <img class="projects__image" :src="project.img" alt="Photo" width="525">
       </div>
-      <div class="projects__card-description">
-        <div class="projects__card-info-wrapper">
-          <h4 class="projects__card-name">{{ project.name }}</h4>
-          <span class="projects__card-info">{{ project.cardInfo }}</span>
+      <div class="card__description">
+        <div class="card__info-wrapper">
+          <h4 class="card__name">{{ project.name }}</h4>
+          <span class="card__info">{{ project.cardInfo }}</span>
         </div>
-        <div class="icon projects__icon-arrow">
-          <a class="icon-link" href="#"><span class="icon-image projects__icon-image"></span></a>
+        <div class="icon card__icon-arrow">
+          <a class="icon-link" href="#!"><span class="icon-image card__icon-image"></span></a>
         </div>
       </div>
     </article>
