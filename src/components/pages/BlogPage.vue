@@ -1,128 +1,89 @@
 <template>
- <PageHeader />
-<main>
- <PromoAndBradcrumbs :promoTitle="promoTitle" :promoText="promoText"/>
+  <PageHeader />
+  <main>
+    <PromoAndBradcrumbs :promoTitle="promoTitle" :promoText="promoText" />
 
-  <section class="latest-post">
-    <div class="center">
-      <h2 class="page-title latest-post__title">Latest post</h2>
-      <div class="latest-post__box">
-        <div class="latest-post__image-wrapper">
-          <img class="latest-post__image" src="@/assets/images/blog/latest-post-image.jpg" alt="Photo" width="569">
-        </div>
-        <div class="latest-post__description-wrapper">
-          <div class="latest-post__description-block">
-            <p class="latest-post__text-thumbnail">
-              Low cost latest invented interior designing ideas
-            </p>
-            <p class="latest-post__text">
-              Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere
-              in.Contrary
-              to popular belief.
-            </p>
-            <p class="latest-post__text">
-              Lorem Ipsum is not simply random text. It has roots in a piece of classica.
-            </p>
+    <section class="latest-post">
+      <div class="center">
+        <h2 class="page-title latest-post__title">Latest post</h2>
+        <div class="latest-post__box">
+          <div class="latest-post__image-wrapper">
+            <img class="latest-post__image" src="@/assets/images/blog/latest-post-image.jpg" alt="Photo" width="569">
           </div>
-          <div class="latest-post__date-wrapper">
-            <span class="latest-post__date">25 December,2022 </span>
-            <div class="icon latest-post__icon-arrow">
-              <a class="icon-link" href="#"><span class="icon-image latest-post__icon-image"></span></a>
+          <div class="latest-post__description-wrapper">
+            <div class="latest-post__description-block">
+              <p class="latest-post__text-thumbnail">
+                Low cost latest invented interior designing ideas
+              </p>
+              <p class="latest-post__text">
+                Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere
+                in.Contrary
+                to popular belief.
+              </p>
+              <p class="latest-post__text">
+                Lorem Ipsum is not simply random text. It has roots in a piece of classica.
+              </p>
+            </div>
+            <div class="latest-post__date-wrapper">
+              <span class="latest-post__date">25 December,2022 </span>
+              <div class="icon latest-post__icon-arrow">
+                <a class="icon-link" href="#"><span class="icon-image latest-post__icon-image"></span></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="news">
-    <div class="center">
-      <div class="news__description">
-        <h2 class="page-title news__title">Articles & news</h2>
-      </div>
-      <div class="news__articles">
-        <ul class="news__list-articles">
-          <li class="news__item" v-for="article in newsArticles" :key="article.id">
-            <article class="news__article">
-              <div class="news__image-wrapper">
-                <img class="news__image" :src="article.image" alt="Photo" width="340">
-                <div class="news__image-tag">{{article.nameTag}}</div>
-              </div>
-              <div class="news__description-card">
-                <p class="news__info">{{article.info}}</p>
-                <div class="news__date-wrapper">
-                  <span class="news__date">{{article.date}}</span>
-                  <div class="icon news__icon-arrow">
-                    <a class="icon-link" href="#"><span class="icon-image news__icon-image"></span></a>
+    <section class="news">
+      <div class="center">
+        <div class="news__description">
+          <h2 class="page-title news__title">Articles & news</h2>
+        </div>
+        <div class="news__articles">
+          <ul class="news__list-articles">
+            <li class="news__item" v-for="article in newsArticles" :key="article.id">
+              <article class="news__article">
+                <div class="news__image-wrapper">
+                  <img class="news__image" :src="article.image" alt="Photo" width="340">
+                  <div class="news__image-tag">{{ article.nameTag }}</div>
+                </div>
+                <div class="news__description-card">
+                  <p class="news__info">{{ article.info }}</p>
+                  <div class="news__date-wrapper">
+                    <span class="news__date">{{ article.date }}</span>
+                    <div class="icon news__icon-arrow">
+                      <a class="icon-link" href="#"><span class="icon-image news__icon-image"></span></a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </article>
-          </li>
-        </ul>
+              </article>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-</main>
- <PageFooter />
+  </main>
+  <PageFooter />
 </template>
 
 <script>
+import { mapState } from 'vuex';
 import PageFooter from '../PageFooter.vue';
 import PageHeader from '../PageHeader.vue';
 import PromoAndBradcrumbs from '../PromoAndBradcrumbs.vue';
 
 
-  export default {
-    components: { PageHeader, PageFooter, PromoAndBradcrumbs },
-    data() {
-      return {
-        promoTitle: 'Articles & news',
-        promoText: 'Home / Blog',
-
-
-
-        newsArticles: [
-          { id: 1,
-            image: require('@/assets/images/news-article1.jpg'),
-            nameTag: 'Kitchan design',
-            info: 'Let’s get solution for building construction work',
-            date: '26 December,2022',
-          },
-          { id: 2,
-            image: require('@/assets/images/news-article2.jpg'),
-            nameTag: 'Living design',
-            info: 'Low cost latest invented interior designing ideas.',
-            date: '22 December,2022',
-          },
-          { id: 3,
-            image: require('@/assets/images/news-article3.jpg'),
-            nameTag: 'Interior Design',
-            info: 'Best for any office & business interior solution',
-            date: '25 December,2022',
-          },
-          { id: 4,
-            image: require('@/assets/images/blog/news-article4.jpg'),
-            nameTag: 'Interior Design',
-            info: 'Best for any office & business interior solution',
-            date: '25 December,2022',
-          },
-          { id: 5,
-            image: require('@/assets/images/blog/news-article5.jpg'),
-            nameTag: 'Interior Design',
-            info: 'Best for any office & business interior solution',
-            date: '25 December,2022',
-          },
-          { id: 6,
-            image: require('@/assets/images/blog/news-article6.jpg'),
-            nameTag: 'Interior Design',
-            info: 'Best for any office & business interior solution',
-            date: '25 December,2022',
-          },
-        ]
-      }
-    },
+export default {
+  components: { PageHeader, PageFooter, PromoAndBradcrumbs },
+  computed: {
+    ...mapState({
+      promoTitle: (state) => state.BlogStore.promoTitle,
+      promoText: (state) => state.BlogStore.promoText,
+      newsArticles: (state) => state.BlogStore.newsArticles,
+    })
+  }
 }
 </script>
 
@@ -139,6 +100,7 @@ import PromoAndBradcrumbs from '../PromoAndBradcrumbs.vue';
 
 .latest-post {
   padding: 200px 0 150px;
+
   &__title {
     text-align: left;
     margin-bottom: 27px;
@@ -215,6 +177,7 @@ import PromoAndBradcrumbs from '../PromoAndBradcrumbs.vue';
     height: 16px;
   }
 }
+
 .news {
   padding: 0 0 200px;
 

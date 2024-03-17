@@ -18,20 +18,11 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      cards: Object,
-    },
-    data() {
-      return {
-        
-        
-      }
-    },
-    methods: {
-      
-    },
-  }
+export default {
+  props: {
+    cards: Object,
+  },
+}
 </script>
 
 <style lang="scss" scoped>

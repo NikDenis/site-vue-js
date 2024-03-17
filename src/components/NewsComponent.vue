@@ -1,85 +1,51 @@
 <template>
-    <section class="news">
-      <div class="center">
-        <div class="news__description">
-          <h2 class="page-title news__title">Articles & news</h2>
-          <p class="page-text news__text">It is a long established fact that a reader will be distracted by the of
-            readable content of a page when lookings at its layouts the points of using.</p>
-        </div>
-        <div class="news__articles">
-          <ul class="news__list-articles">
-            <li class="news__item" v-for="article in newsArticles" :key="article.id">
-              <article class="news__article">
-                <div class="news__image-wrapper">
-                  <img class="news__image" :src="article.image" alt="Photo" width="340">
-                  <div class="news__image-tag">{{ article.nameTag }}</div>
-                </div>
-                <div class="news__description-card">
-                  <p class="news__info">{{ article.info }}</p>
-                  <div class="news__date-wrapper">
-                    <span class="news__date">article.date</span>
-                    <div class="icon news__icon-arrow">
-                      <a class="icon-link" href="#"><span class="icon-image news__icon-image"></span></a>
-                    </div>
+  <section class="news">
+    <div class="center">
+      <div class="news__description">
+        <h2 class="page-title news__title">Articles & news</h2>
+        <p class="page-text news__text">It is a long established fact that a reader will be distracted by the of
+          readable content of a page when lookings at its layouts the points of using.</p>
+      </div>
+      <div class="news__articles">
+        <ul class="news__list-articles">
+          <li class="news__item" v-for="article in newsArticles" :key="article.id">
+            <article class="news__article">
+              <div class="news__image-wrapper">
+                <img class="news__image" :src="article.image" alt="Photo" width="340">
+                <div class="news__image-tag">{{ article.nameTag }}</div>
+              </div>
+              <div class="news__description-card">
+                <p class="news__info">{{ article.info }}</p>
+                <div class="news__date-wrapper">
+                  <span class="news__date">article.date</span>
+                  <div class="icon news__icon-arrow">
+                    <a class="icon-link" href="#"><span class="icon-image news__icon-image"></span></a>
                   </div>
                 </div>
-              </article>
-            </li>
-          </ul>
-        </div>
+              </div>
+            </article>
+          </li>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        newsArticles: [
-          { id: 1,
-            image: require('@/assets/images/news-article1.jpg'),
-            nameTag: 'Kitchan design',
-            info: 'Let’s get solution for building construction work',
-            date: '26 December,2022',
-          },
-          { id: 2,
-            image: require('@/assets/images/news-article2.jpg'),
-            nameTag: 'Living design',
-            info: 'Low cost latest invented interior designing ideas.',
-            date: '22 December,2022',
-          },
-          { id: 3,
-            image: require('@/assets/images/news-article3.jpg'),
-            nameTag: 'Interior Design',
-            info: 'Best for any office & business interior solution',
-            date: '25 December,2022',
-          },
-          // { id: 4,
-          //   image: require('@/assets/images/blog/news-article4.jpg'),
-          //   nameTag: 'Interior Design',
-          //   info: 'Best for any office & business interior solution',
-          //   date: '25 December,2022',
-          // },
-          // { id: 5,
-          //   image: require('@/assets/images/blog/news-article5.jpg'),
-          //   nameTag: 'Interior Design',
-          //   info: 'Best for any office & business interior solution',
-          //   date: '25 December,2022',
-          // },
-          // { id: 6,
-          //   image: require('@/assets/images/blog/news-article6.jpg'),
-          //   nameTag: 'Interior Design',
-          //   info: 'Best for any office & business interior solution',
-          //   date: '25 December,2022',
-          // },
-        ]
-      }
-    },
+import { mapState } from 'vuex';
+
+export default {
+  computed: {
+    ...mapState({
+      newsArticles: (state) => state.NewsStore.newsArticles,
+    })
+  },
 }
 </script>
 
 <style lang="scss">
 @import '@/assets/style/scss/vars.scss';
+
 .news {
   padding: 96px 0;
 
@@ -182,8 +148,7 @@
   &__icon-image {
     width: 8px;
     height: 16px;
-    background: url(@/assets/images/arrow-products-small.svg) no-repeat center /
-      cover;
+    background: url(@/assets/images/arrow-products-small.svg) no-repeat center / cover;
   }
 }
 </style>

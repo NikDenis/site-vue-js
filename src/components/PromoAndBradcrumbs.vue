@@ -1,5 +1,5 @@
 <template>
-   <section class="promo">
+  <section class="promo">
     <div class="center">
       <div class="promo__wrapper">
         <div class="promo__banner">
@@ -14,18 +14,12 @@
 </template>
 
 <script>
-  export default {
-    props: {
-      promoTitle: String,
-      promoText: String,
-    },
-    data() {
-      return {
-        // promoTitle: this.promoTitle,
-        // promoText: this.promoText,
-      }
-    },
-  }
+export default {
+  props: {
+    promoTitle: String,
+    promoText: String,
+  },
+}
 </script>
 
 <style lang="scss" scoped>
@@ -69,5 +63,4 @@
     letter-spacing: 0.01em;
   }
 }
-
 </style>
