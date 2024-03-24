@@ -1,4 +1,5 @@
 <template>
+  <PageHeader />
   <main>
     <PromoAndBradcrumbs :promoTitle="promoTitle" :promoText="promoText" />
 
@@ -68,15 +69,18 @@
     </section>
 
   </main>
+  <PageFooter />
 </template>
 
 <script>
 import { mapState } from 'vuex';
+import PageFooter from '../PageFooter.vue';
+import PageHeader from '../PageHeader.vue';
 import PromoAndBradcrumbs from '../PromoAndBradcrumbs.vue';
 
 
 export default {
-  components: { PromoAndBradcrumbs },
+  components: { PromoAndBradcrumbs, PageHeader, PageFooter },
   computed: {
     ...mapState({
       promoTitle: (state) => state.BlogStore.promoTitle,

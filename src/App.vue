@@ -8,16 +8,18 @@
 <OurProjectPage />
 <hr style="height: 1px;background-color: black;">
 <ProjectDetailsPage /> -->
-    <PageHeader />
+    <!-- <PageHeader /> -->
 
     <RouterView />
+    <!-- <NotFoundPage /> -->
 
-    <PageFooter />
+    <!-- <PageFooter /> -->
 </template>
 
 <script>
-import PageFooter from './components/PageFooter.vue';
-import PageHeader from './components/PageHeader.vue';
+// import PageFooter from './components/PageFooter.vue';
+// import PageHeader from './components/PageHeader.vue';
+// import NotFoundPage from './components/pages/NotFoundPage.vue';
 
 // import BlogDetailsPage from './components/pages/BlogDetailsPage.vue';
 // import BlogPage from './components/pages/BlogPage.vue';
@@ -29,7 +31,7 @@ import PageHeader from './components/PageHeader.vue';
 
 
 export default {
-    components: { PageHeader, PageFooter }
+    // components: { NotFoundPage }
 }
 </script>
 

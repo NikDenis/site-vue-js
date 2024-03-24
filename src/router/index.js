@@ -5,6 +5,7 @@ import BlogPage from '@/components/pages/BlogPage.vue';
 import BlogDetailsPage from '@/components/pages/BlogDetailsPage.vue';
 import ProjectDetailsPage from '@/components/pages/ProjectDetailsPage.vue';
 import OurProjectPage from '@/components/pages/OurProjectPage.vue';
+import NotFoundPage from '@/components/pages/NotFoundPage.vue';
 
 
 const routes = [
@@ -33,7 +34,11 @@ const routes = [
     name: 'ProjectDetailsPage',
     component: ProjectDetailsPage,
   },
-
+  {
+    path: '/:CatchAll(.*)',
+    name: 'NotFoundPage',
+    component: NotFoundPage,
+  },
 ];
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),

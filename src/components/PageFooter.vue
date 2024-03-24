@@ -4,9 +4,9 @@
       <div class="page-footer__box">
         <div class="page-footer__icons-wrapper">
           <div class="page-logo page-footer__logo">
-            <a class="page-logo__link" href="./index.html">
+            <router-link class="page-logo__link" :to="'/'">
               <img class="page-logo__image" src="@/assets/images/page-logo.svg" alt="Logo" width="177">
-            </a>
+            </router-link>
           </div>
           <p class="page-text page-footer__text-info">
             It is a long established fact that a reader will be distracted lookings.
@@ -32,14 +32,8 @@
           <div class="page-footer__nav">
             <h5 class="page-footer-title">Pages</h5>
             <ul class="page-footer__nav-list">
-              <li class="page-footer-item page-footer__nav-item">
-                <a class="page-footer-link page-footer__nav-link" href="#!">Home</a>
-              </li>
-              <li class="page-footer-item page-footer__nav-item">
-                <a class="page-footer-link page-footer__nav-link" href="#!">Project</a>
-              </li>
-              <li class="page-footer-item page-footer__nav-item">
-                <a class="page-footer-link page-footer__nav-link" href="#!">Blog</a>
+              <li class="page-header__item" v-for="link in   linksPage  " :key="link.id">
+                <router-link class="page-header__link" :to="link.url">{{ link.name }}</router-link>
               </li>
             </ul>
           </div>
@@ -65,13 +59,34 @@
 </template>
 
 <script>
-  export default {
-    
-  }
+export default {
+  data() {
+    return {
+      linksPage: [
+        {
+          id: 1,
+          name: 'Home',
+          url: '/'
+        },
+        {
+          id: 2,
+          name: 'Project',
+          url: '/project'
+        },
+        {
+          id: 3,
+          name: 'Blog',
+          url: '/blog'
+        },
+      ]
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 @import '@/assets/style/scss/vars.scss';
+
 .page-footer {
   padding-bottom: 134px;
 
@@ -166,5 +181,4 @@
     color: $text-color2;
   }
 }
-
 </style>

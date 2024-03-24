@@ -1,4 +1,5 @@
 <template>
+  <PageHeader />
   <PromoAndBradcrumbs :promoTitle="promoTitle" :promoText="promoText" />
 
   <main>
@@ -24,15 +25,18 @@
 
 
   </main>
+  <PageFooter />
 </template>
 
 <script>
 import { mapState } from 'vuex';
 import CardOurProject from '../CardOurProject.vue';
+import PageFooter from '../PageFooter.vue';
+import PageHeader from '../PageHeader.vue';
 import PromoAndBradcrumbs from '../PromoAndBradcrumbs.vue';
 
 export default {
-  components: { PromoAndBradcrumbs, CardOurProject },
+  components: { PromoAndBradcrumbs, CardOurProject, PageHeader, PageFooter },
   data() {
     return {
       currentCards: null,

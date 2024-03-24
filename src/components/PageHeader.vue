@@ -4,9 +4,9 @@
     <div class="center">
       <div class="page-header__wrapper">
         <div class="page-logo">
-          <a class="page-logo__link" href="./index.html">
+          <router-link class="page-logo__link" :to="'/'">
             <img class="page-logo__image" src="@/assets/images/page-logo.svg" alt="Logo" width="177">
-          </a>
+          </router-link>
         </div>
         <div class="page-header__nav-wrapper">
           <nav class="page-header__nav">
@@ -14,12 +14,6 @@
               <li class="page-header__item" v-for="link in   linksPage  " :key="link.id">
                 <router-link class="page-header__link" :to="link.url">{{ link.name }}</router-link>
               </li>
-              <!-- <li class="page-header__item">
-                <router-link class="page-header__link" :to=" #!">Project</router-link>
-              </li>
-              <li class="page-header__item">
-                <router-link class="page-header__link" :to=" #!">Blog</router-link>
-              </li> -->
             </ul>
           </nav>
         </div>

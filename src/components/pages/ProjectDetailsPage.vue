@@ -1,4 +1,5 @@
 <template>
+  <PageHeader />
   <div class="promo"></div>
 
   <main>
@@ -25,13 +26,16 @@
       </div>
     </section>
   </main>
+  <PageFooter />
 </template>
 
 <script>
+import PageFooter from '../PageFooter.vue';
+import PageHeader from '../PageHeader.vue';
 import SwiperComponent from '../SwiperComponent.vue';
 
 export default {
-  components: { SwiperComponent }
+  components: { SwiperComponent, PageHeader, PageFooter }
 }
 </script>
 

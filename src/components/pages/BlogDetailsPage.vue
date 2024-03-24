@@ -1,4 +1,5 @@
 <template>
+  <PageHeader />
   <main>
     <div class="banner"></div>
 
@@ -84,10 +85,13 @@
       </div>
     </section>
   </main>
+  <PageFooter />
 </template>
 
 <script>
 import { mapState } from 'vuex';
+import PageFooter from '../PageFooter.vue';
+import PageHeader from '../PageHeader.vue';
 
 export default {
   computed: {
@@ -117,8 +121,7 @@ export default {
       });
     },
   },
-
-
+  components: { PageHeader, PageFooter }
 }
 
 </script>
