@@ -10,6 +10,7 @@ const BlogStore = {
         nameTag: 'Kitchan design',
         info: 'Let’s get solution for building construction work',
         date: '26 December,2022',
+        linkDetails: '/blog-details',
       },
       {
         id: 2,
@@ -17,6 +18,7 @@ const BlogStore = {
         nameTag: 'Living design',
         info: 'Low cost latest invented interior designing ideas.',
         date: '22 December,2022',
+        linkDetails: '/blog-details',
       },
       {
         id: 3,
@@ -24,6 +26,7 @@ const BlogStore = {
         nameTag: 'Interior Design',
         info: 'Best for any office & business interior solution',
         date: '25 December,2022',
+        linkDetails: '/blog-details',
       },
       {
         id: 4,
@@ -31,6 +34,7 @@ const BlogStore = {
         nameTag: 'Interior Design',
         info: 'Best for any office & business interior solution',
         date: '25 December,2022',
+        linkDetails: '/blog-details',
       },
       {
         id: 5,
@@ -38,6 +42,7 @@ const BlogStore = {
         nameTag: 'Interior Design',
         info: 'Best for any office & business interior solution',
         date: '25 December,2022',
+        linkDetails: '/blog-details',
       },
       {
         id: 6,
@@ -45,6 +50,7 @@ const BlogStore = {
         nameTag: 'Interior Design',
         info: 'Best for any office & business interior solution',
         date: '25 December,2022',
+        linkDetails: '/blog-deatils',
       },
     ]
   }

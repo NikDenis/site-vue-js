@@ -10,7 +10,9 @@
           <span class="card__info">{{ card.text }}</span>
         </div>
         <div class="icon card__icon-arrow">
-          <a class="icon-link" href="#!"><span class="icon-image card__icon-image"></span></a>
+          <router-link class="icon-link" :to="card.linkDetails">
+            <span class="icon-image card__icon-image"></span>
+          </router-link>
         </div>
       </div>
     </article>
@@ -22,6 +24,7 @@ export default {
   props: {
     cards: Object,
   },
+
 }
 </script>
 

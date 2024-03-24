@@ -1,5 +1,5 @@
 <template>
-<IndexPage />
+    <!-- <IndexPage />
 <hr style="height: 1px;background-color: black;">
 <BlogPage />
 <hr style="height: 1px;background-color: black;">
@@ -7,24 +7,30 @@
 <hr style="height: 1px;background-color: black;">
 <OurProjectPage />
 <hr style="height: 1px;background-color: black;">
-<ProjectDetailsPage />
+<ProjectDetailsPage /> -->
+    <PageHeader />
+
+    <RouterView />
+
+    <PageFooter />
 </template>
 
 <script>
-import BlogDetailsPage from './components/pages/BlogDetailsPage.vue';
-import BlogPage from './components/pages/BlogPage.vue';
-import IndexPage from './components/pages/IndexPage.vue';
-import OurProjectPage from './components/pages/OurProjectPage.vue';
-import ProjectDetailsPage from './components/pages/ProjectDetailsPage.vue';
+import PageFooter from './components/PageFooter.vue';
+import PageHeader from './components/PageHeader.vue';
+
+// import BlogDetailsPage from './components/pages/BlogDetailsPage.vue';
+// import BlogPage from './components/pages/BlogPage.vue';
+// import IndexPage from './components/pages/IndexPage.vue';
+// import OurProjectPage from './components/pages/OurProjectPage.vue';
+// import ProjectDetailsPage from './components/pages/ProjectDetailsPage.vue';
 // import PageFooter from './components/PageFooter.vue';
 
 
 
 export default {
-    components: { IndexPage, BlogPage, BlogDetailsPage, OurProjectPage, ProjectDetailsPage }
+    components: { PageHeader, PageFooter }
 }
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

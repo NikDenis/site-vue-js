@@ -19,7 +19,9 @@
                 <div class="news__date-wrapper">
                   <span class="news__date">article.date</span>
                   <div class="icon news__icon-arrow">
-                    <a class="icon-link" href="#"><span class="icon-image news__icon-image"></span></a>
+                    <router-link class="icon-link" :to="article.linkDetails">
+                      <span class="icon-image news__icon-image"></span>
+                    </router-link>
                   </div>
                 </div>
               </div>

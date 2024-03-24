@@ -10,7 +10,9 @@
           <span class="card__info">{{ project.cardInfo }}</span>
         </div>
         <div class="icon card__icon-arrow">
-          <a class="icon-link" href="#!"><span class="icon-image card__icon-image"></span></a>
+          <router-link class="icon-link" :to="project.linkDetails">
+            <span class="icon-image card__icon-image"></span>
+          </router-link>
         </div>
       </div>
     </article>
@@ -18,40 +20,45 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        projects: [
-          {
-            id: 1,
-            img: require('@/assets/images/projects/projects-1.jpg'),
-            name: 'Modern kitchan',
-            cardInfo: 'Decor / Artchitecture',
-          },
-          {
-            id: 2,
-            img: require('@/assets/images/projects/projects-2.jpg'),
-            name: 'Modern kitchan',
-            cardInfo: 'Decor / Artchitecture',
-          },
-          {
-            id: 3,
-            img: require('@/assets/images/projects/projects-3.jpg'),
-            name: 'Modern kitchan',
-            cardInfo: 'Decor / Artchitecture',
-          },
-          {
-            id: 4,
-            img: require('@/assets/images/projects/projects-4.jpg'),
-            name: 'Modern kitchan',
-            cardInfo: 'Decor / Artchitecture',
-          }
-        ]
-      }
-    },
-  }
+export default {
+  data() {
+    return {
+      projects: [
+        {
+          id: 1,
+          img: require('@/assets/images/projects/projects-1.jpg'),
+          name: 'Modern kitchan',
+          cardInfo: 'Decor / Artchitecture',
+          linkDetails: '/project-details',
+
+        },
+        {
+          id: 2,
+          img: require('@/assets/images/projects/projects-2.jpg'),
+          name: 'Modern kitchan',
+          cardInfo: 'Decor / Artchitecture',
+          linkDetails: '/project-details',
+
+        },
+        {
+          id: 3,
+          img: require('@/assets/images/projects/projects-3.jpg'),
+          name: 'Modern kitchan',
+          cardInfo: 'Decor / Artchitecture',
+          linkDetails: '/project-details',
+
+        },
+        {
+          id: 4,
+          img: require('@/assets/images/projects/projects-4.jpg'),
+          name: 'Modern kitchan',
+          cardInfo: 'Decor / Artchitecture',
+          linkDetails: '/project-details',
+        }
+      ]
+    }
+  },
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

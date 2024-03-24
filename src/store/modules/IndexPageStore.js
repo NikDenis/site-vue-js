@@ -7,6 +7,7 @@ const NewsStore = {
         nameTag: 'Kitchan design',
         info: 'Let’s get solution for building construction work',
         date: '26 December,2022',
+        linkDetails: '/blog-details',
       },
       {
         id: 2,
@@ -14,6 +15,7 @@ const NewsStore = {
         nameTag: 'Living design',
         info: 'Low cost latest invented interior designing ideas.',
         date: '22 December,2022',
+        linkDetails: '/blog-details',
       },
       {
         id: 3,
@@ -21,6 +23,7 @@ const NewsStore = {
         nameTag: 'Interior Design',
         info: 'Best for any office & business interior solution',
         date: '25 December,2022',
+        linkDetails: '/blog-details',
       },
       // {
       //   id: 4,

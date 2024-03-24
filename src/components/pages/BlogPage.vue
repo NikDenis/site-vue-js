@@ -1,5 +1,4 @@
 <template>
-  <PageHeader />
   <main>
     <PromoAndBradcrumbs :promoTitle="promoTitle" :promoText="promoText" />
 
@@ -27,7 +26,9 @@
             <div class="latest-post__date-wrapper">
               <span class="latest-post__date">25 December,2022 </span>
               <div class="icon latest-post__icon-arrow">
-                <a class="icon-link" href="#"><span class="icon-image latest-post__icon-image"></span></a>
+                <router-link class="icon-link" :to="'/blog-details'">
+                  <span class="icon-image latest-post__icon-image"></span>
+                </router-link>
               </div>
             </div>
           </div>
@@ -53,7 +54,9 @@
                   <div class="news__date-wrapper">
                     <span class="news__date">{{ article.date }}</span>
                     <div class="icon news__icon-arrow">
-                      <a class="icon-link" href="#"><span class="icon-image news__icon-image"></span></a>
+                      <router-link class="icon-link" :to="article.linkDetails">
+                        <span class="icon-image news__icon-image"></span>
+                      </router-link>
                     </div>
                   </div>
                 </div>
@@ -65,18 +68,15 @@
     </section>
 
   </main>
-  <PageFooter />
 </template>
 
 <script>
 import { mapState } from 'vuex';
-import PageFooter from '../PageFooter.vue';
-import PageHeader from '../PageHeader.vue';
 import PromoAndBradcrumbs from '../PromoAndBradcrumbs.vue';
 
 
 export default {
-  components: { PageHeader, PageFooter, PromoAndBradcrumbs },
+  components: { PromoAndBradcrumbs },
   computed: {
     ...mapState({
       promoTitle: (state) => state.BlogStore.promoTitle,
