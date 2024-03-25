@@ -46,7 +46,7 @@ export default {
   min-height: 351px;
   max-width: 1920px;
   width: 100%;
-  margin: 0 auto 200px;
+  margin: 0 auto;
   background: url(@/assets/images/project-details/bg-image-promo.jpg) no-repeat center / cover;
 }
 
